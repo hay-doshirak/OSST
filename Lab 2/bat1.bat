@@ -1,18 +1,18 @@
 @ECHO OFF
 
-REM Проверка наличия параметров
+REM ГЏГ°Г®ГўГҐГ°ГЄГ  Г­Г Г«ГЁГ·ГЁГї ГЇГ Г°Г Г¬ГҐГІГ°Г®Гў
 IF "%~1"=="" GOTO ERROR_FILE
 IF "%~2"=="" GOTO ERROR_PARAMETR
 IF "%~3"=="" GOTO ERROR_PARAMETR
 IF "%~4"=="" GOTO ERROR_PARAMETR
 
-REM проверка существования исходного файла
+REM ГЇГ°Г®ГўГҐГ°ГЄГ  Г±ГіГ№ГҐГ±ГІГўГ®ГўГ Г­ГЁГї ГЁГ±ГµГ®Г¤Г­Г®ГЈГ® ГґГ Г©Г«Г 
 IF NOT EXIST "%~1" (
     ECHO ERROR: "%~1" not found!
     GOTO END
 )	
 
-REM проверка допустимых значений параметров
+REM ГЇГ°Г®ГўГҐГ°ГЄГ  Г¤Г®ГЇГіГ±ГІГЁГ¬Г»Гµ Г§Г­Г Г·ГҐГ­ГЁГ© ГЇГ Г°Г Г¬ГҐГІГ°Г®Гў
 SET /A lines1=%~2
 SET /A lines2=%~3
 SET /A lines3=%~4
@@ -30,7 +30,7 @@ IF %lines3% LEQ 0 (
     GOTO END
 )	
 
-REM объявление переменных с размерами 3-х будущих файлов
+REM Г®ГЎГєГїГўГ«ГҐГ­ГЁГҐ ГЇГҐГ°ГҐГ¬ГҐГ­Г­Г»Гµ Г± Г°Г Г§Г¬ГҐГ°Г Г¬ГЁ 3-Гµ ГЎГіГ¤ГіГ№ГЁГµ ГґГ Г©Г«Г®Гў
 SET /A part1=%~2
 SET /A part2=%~3
 SET /A part3=%~4
@@ -62,7 +62,7 @@ SET /A skip=%part1%+%part2%
 ECHO Spliting done!
 GOTO END
 
-REM ошибки
+REM Г®ГёГЁГЎГЄГЁ
 :ERROR_FILE
 ECHO ERROR: Enter the file name
 GOTO END
